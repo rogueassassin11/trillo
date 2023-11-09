@@ -18,19 +18,29 @@
   --line: 1px solid var(--color-grey-light-2);
 }
 
+/////////////////////////////
+// MEDIA QUERIES VARIABLES
+$bp-largest: 75em; //1200px
+$bp-large: 68.75em; //1100px
+$bp-medium: 56.25em; //900px
+/////////////////////////////////
+/// BASE
 * {
   margin: 0;
   padding: 0;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
 
-  *,
-  *::before,
-  *::after {
-    box-sizing: inherit;
-  }
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem = 10px, 10px/16px
 
-  html {
-    box-sizing: border-box;
-    font-size: 62.5%; // 1rem = 10px, 10px/16px
+  @media only screen and (max-width: $bp-large) {
+    font-size: 50%;
   }
 }
 
