@@ -21,6 +21,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media only screen and (max-width: $bp-smallest) {
+    flex-wrap: wrap;
+    height: 11rem;
+    align-content: space-around;
+  }
 }
 
 .content {
@@ -56,6 +62,10 @@
   border-bottom: var(--line);
   font-size: 1.2rem;
   flex-wrap: wrap;
+
+  @media only screen and (max-width: $bp-small) {
+    flex-direction: column;
+  }
 }
 
 .description {
@@ -65,6 +75,10 @@
   flex: 0 0 60%;
   margin-right: 2rem;
   font-size: 1.5rem;
+
+  @media only screen and (max-width: $bp-small) {
+    margin-right: 0;
+  }
 }
 
 .user-reviews {
